@@ -175,6 +175,20 @@ function clearScores() {
 // Start timer-displayd finished
 startBtn.addEventListener("click", startQuiz);
 
+//score
+submitScrBtn.addEventListener("click", addScore);
 
+//back button
+goBackBtn.addEventListener("click", function () {
+    highscoresEl.style.display = "none";
+    introEl.style.display = "block";
+    secondsLeft = 100;
+    timeEl.textContent = `Time:${secondsLeft}s`;
+});
+
+//answers loop
+ansBtn.forEach(item => {
+    item.addEventListener('click', checkAnswer);
+});
 
 
