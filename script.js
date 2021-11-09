@@ -27,7 +27,6 @@ const ansBtn = document.querySelectorAll("button.ansBtn");
 const ans1Btn = document.querySelector("#answer1");
 const ans2Btn = document.querySelector("#answer2");
 const ans3Btn = document.querySelector("#answer3");
-const ans4Btn = document.querySelector("#answer4");
 const submitScrBtn = document.querySelector("#submit-score");
 const goBackBtn = document.querySelector("#goback");
 const clearScrBtn = document.querySelector("#clearscores");
