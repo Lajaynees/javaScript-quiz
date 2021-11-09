@@ -75,3 +75,52 @@ function setTime() {
         }
     }, 1000);
 }
+
+// start quiz-set time- set questions countdown -displays next question/answers
+function startQuiz() {
+    introEl.style.display = "none";
+    questionsEl.style.display = "block";
+    questionCount = 0;
+
+    setTime();
+    setQuestion(questionCount);
+}
+
+function setQuestion(id) {
+    if (id < questions.length) {
+        questionEl.textContent = questions[id].question;
+        ans1Btn.textContent = questions[id].answers[0];
+        ans2Btn.textContent = questions[id].answers[1];
+        ans3Btn.textContent = questions[id].answers[2];
+
+    }
+}
+
+function checkAnswer(event) {
+    event.preventDefault();
+
+ yesnoEl.style.display = "block";
+    let p = document.createElement("p");
+    yesnoEl.appendChild(p);
+
+    setTimeout(function () {
+        p.style.display = 'none';
+    }, 1000);
+
+    // answer checker
+    if (questions[questionCount].correctAnswer === event.target.value) {
+        p.textContent = "Correct!";
+    } else if (questions[questionCount].correctAnswer !== event.target.value) {
+        secondsLeft = secondsLeft - 10;
+        p.textContent = "Wrong!";
+    }
+
+    if (questionCount < questions.length) {
+        questionCount++;
+    }
+   
+    setQuestion(questionCount);
+}
+
+
+
