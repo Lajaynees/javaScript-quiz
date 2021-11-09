@@ -175,6 +175,11 @@ function clearScores() {
 // Start timer-displayd finished
 startBtn.addEventListener("click", startQuiz);
 
+//loop answers
+ansBtn.forEach(item => {
+    item.addEventListener('click', checkAnswer);
+});
+
 //score
 submitScrBtn.addEventListener("click", addScore);
 
@@ -192,3 +197,38 @@ ansBtn.forEach(item => {
 });
 
 
+clearScrBtn.addEventListener("click", clearScores);
+
+// View/Hide High Scores Button
+viewScrBtn.addEventListener("click", function () {
+    if (highscoresEl.style.display === "none") {
+        highscoresEl.style.display = "block";
+    } else if (highscoresEl.style.display === "block") {
+        highscoresEl.style.display = "none";
+    } else {
+        return alert("No scores to show.");
+    }
+});
+startBtn.addEventListener("click", startQuiz);
+
+// Check answers loop
+ansBtn.forEach(item => {
+    item.addEventListener('click', checkAnswer);
+});
+
+// Add score
+submitScrBtn.addEventListener("click", addScore);
+
+// Clear the scores
+clearScrBtn.addEventListener("click", clearScores);
+
+// View-Hide 
+viewScrBtn.addEventListener("click", function () {
+    if (highscoresEl.style.display === "none") {
+        highscoresEl.style.display = "block";
+    } else if (highscoresEl.style.display === "block") {
+        highscoresEl.style.display = "none";
+    } else {
+        return alert("NONE.");
+    }
+});
