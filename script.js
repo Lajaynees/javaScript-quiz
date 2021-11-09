@@ -170,5 +170,11 @@ function clearScores() {
     scoreListEl.innerHTML="";
 }
 
+//ALL Event Listners
+
+// Start timer-displayd finished
+startBtn.addEventListener("click", startQuiz);
+
+
 
 
