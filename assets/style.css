@@ -1,32 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="./style.css">
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
 
-    <!-- Page Title -->
-    <title>Javascript Code Quiz</title>
-</head>
+html, body {
+    height: 100%;
+}
 
-<body>
-    <!-- Container for Header -->
-    <header class="container-fluid mb-5">
-        <!-- div for scores link and time -->
-        <div class="row">
-            <!-- View highscores -->
-            <div class="col-6">
-                <!-- <a href="">View Highscores</a> -->
-                <button id="view-scores" type="button" class="btn btn-secondary d-inline-block mt-1">View High Scores</button>
-            </div>
-            <!-- Timer -->
-            <div class="col-6">
-                <p class="d-flex justify-content-end time">Time:75s</p>
-            </div>
-        </div>
-    </header>
+body {
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    
+    flex-shrink: 0;
+    font-size: .5rem;
+}
+
+
+#questions,
+#final,
+#highscores,
+#yesno {
+    display: none;  
+  } 
+
+/* show-none  */
+ul.nobullets {
+list-style-type: none;
+}
+
+/* Answer button styling */
+.ansBtn,
+.ansBtn:hover,
+.ansBtn:active,
+.ansBtn:focus,
+.ansBtn:active:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: #28a745;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background-image: img src="assets/puzzle-img.jpeg";
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+	    background-image: img src="assets/puzzle-img.jpeg";
+   }
+}
