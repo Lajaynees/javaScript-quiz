@@ -45,7 +45,7 @@ const questions = [
         
         question: "Inside which HTML element do we put the JavaScript?",
         choices: ["1. <js>", "2. <javascript>", "3. <scripting>", "4. <script>"],
-        answer: "d. <script>"
+        answer: "4. <script>"
     },
     {
         
@@ -60,3 +60,18 @@ const questions = [
         correctAnswer: "2"
     }
 ];
+
+// timer function
+function setTime() {
+    let timerInterval = setInterval(function () {
+        secondsLeft--;
+        timeEl.textContent = `Time:${secondsLeft}s`;
+
+        if (secondsLeft === 0 || questionCount === questions.length) {
+            clearInterval(timerInterval);
+            questionsEl.style.display = "none";
+            finalEl.style.display = "block";
+            scoreEl.textContent = secondsLeft;
+        }
+    }, 1000);
+}
